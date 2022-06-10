@@ -1,0 +1,13 @@
+C:\Users\sujin\source\repos\Project\Project\Project.Tizen\bin\Debug\tizen60\Project.Tizen.deps.json
+C:\Users\sujin\source\repos\Project\Project\Project.Tizen\bin\Debug\tizen60\Project.Tizen.dll
+C:\Users\sujin\source\repos\Project\Project\Project.Tizen\bin\Debug\tizen60\Project.Tizen.pdb
+C:\Users\sujin\source\repos\Project\Project\Project.Tizen\bin\Debug\tizen60\Project.dll
+C:\Users\sujin\source\repos\Project\Project\Project.Tizen\bin\Debug\tizen60\Project.pdb
+C:\Users\sujin\source\repos\Project\Project\Project.Tizen\obj\Debug\tizen60\Project.Tizen.csproj.AssemblyReference.cache
+C:\Users\sujin\source\repos\Project\Project\Project.Tizen\obj\Debug\tizen60\Project.Tizen.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sujin\source\repos\Project\Project\Project.Tizen\obj\Debug\tizen60\Project.Tizen.AssemblyInfoInputs.cache
+C:\Users\sujin\source\repos\Project\Project\Project.Tizen\obj\Debug\tizen60\Project.Tizen.AssemblyInfo.cs
+C:\Users\sujin\source\repos\Project\Project\Project.Tizen\obj\Debug\tizen60\Project.Tizen.csproj.CoreCompileInputs.cache
+C:\Users\sujin\source\repos\Project\Project\Project.Tizen\obj\Debug\tizen60\Project.Tizen.csproj.CopyComplete
+C:\Users\sujin\source\repos\Project\Project\Project.Tizen\obj\Debug\tizen60\Project.Tizen.dll
+C:\Users\sujin\source\repos\Project\Project\Project.Tizen\obj\Debug\tizen60\Project.Tizen.pdb

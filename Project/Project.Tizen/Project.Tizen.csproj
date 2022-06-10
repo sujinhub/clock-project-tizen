@@ -1,0 +1,55 @@
+﻿<Project Sdk="Tizen.NET.Sdk/1.1.7">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>tizen60</TargetFramework>
+      <AssemblyName>Project.Tizen</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>portable</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>None</DebugType>
+  </PropertyGroup>
+
+    <PropertyGroup>
+        <ProjectTypeGuids>{B484D2DE-331C-4CA2-B931-2B4BDAD9945F}</ProjectTypeGuids>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="res\Apple SD Gothic Neo Bold.ttf" />
+      <None Remove="res\AppleSDGothicNeoB.ttf" />
+      <None Remove="res\AppleSDGothicNeoH.ttf" />
+      <None Remove="res\AppleSDGothicNeoM.ttf" />
+      <None Remove="res\Apple_SD_Gothic_Neo_Bold.ttf" />
+      <None Remove="res\Cafe24Ssurround.ttf" />
+      <None Remove="res\EliceDigitalBaeum_Regular.ttf" />
+      <None Remove="res\Rush of the Geisha.ttf" />
+      <None Remove="res\Strugglefaith_Regular.ttf" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Include="res\AppleSDGothicNeoB.ttf" />
+      <EmbeddedResource Include="res\AppleSDGothicNeoM.ttf" />
+      <EmbeddedResource Include="res\EliceDigitalBaeum_Regular.ttf" />
+      <EmbeddedResource Include="res\Strugglefaith_Regular.ttf" />
+    </ItemGroup>
+
+    <ItemGroup>
+    <Folder Include="lib\" />
+  </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="NETStandard.Library" Version="2.0.3" />
+      <PackageReference Include="Xamarin.Forms" Version="5.0.0.2401" />
+    </ItemGroup>
+
+
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Project\Project.csproj" />
+  </ItemGroup>
+  
+
+</Project>

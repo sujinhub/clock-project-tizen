@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Tizen.NET" Version="9.0.0.16760" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2401" />
+  </ItemGroup>
+    
+    <ItemGroup Condition="'$(Configuration)' != 'Release'">
+        <PackageReference Include="TizenHotReloader" Version="1.0.1" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <Reference Include="PresentationCore">
+        <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\PresentationCore.dll</HintPath>
+      </Reference>
+      <Reference Include="PresentationFramework">
+        <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0\PresentationFramework.dll</HintPath>
+      </Reference>
+      <Reference Include="WindowsBase">
+        <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\WindowsBase.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+    
+
+    <ItemGroup>
+    <Compile Update="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="App.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="MainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

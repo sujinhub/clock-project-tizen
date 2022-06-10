@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project.MainPage">
+    <ContentPage.Content>
+
+        <StackLayout Spacing="0">
+            <!-- 1 -->
+            <StackLayout Orientation="Horizontal" Spacing="10"
+                HeightRequest="80" BackgroundColor="#51517A">
+                
+                <!-- 증권 정보 -->
+                <Image Source="user_icon.png"
+                       WidthRequest="100" HeightRequest="60"
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Label Text="User님, 안녕하세요!  | " TextColor="White" FontSize="30"
+                                   VerticalTextAlignment="Center"
+                                   HorizontalTextAlignment="Center"
+                                   FontFamily="EliceFont"></Label>
+                <StackLayout x:Name="stock_info_layout" Orientation="Horizontal" Spacing="20">
+                    <Label x:Name="stock_item_label" Text=" " TextColor="White" FontSize="30" FontFamily="AppleFont"
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                    <Label x:Name="stock_data_label"  Text=" " TextColor="Red" FontSize="30" FontFamily="AppleFont"
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+            </StackLayout>
+            
+            
+            <!-- 2 -->
+            <AbsoluteLayout VerticalOptions="FillAndExpand">
+                <!-- Background Image -->
+                <Image x:Name="background_image" Source="background1.png"
+                       AbsoluteLayout.LayoutBounds="0,0,1920,940"
+                       Aspect="AspectFill"></Image>
+                <StackLayout AbsoluteLayout.LayoutBounds="0,100,1920,800">
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="1600">
+                        <!-- 날짜 -->
+                        <AbsoluteLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                            <Label x:Name="date_label"
+                                   VerticalOptions="CenterAndExpand"
+                                   HorizontalOptions="CenterAndExpand"
+                                   VerticalTextAlignment="Center"
+                                   HorizontalTextAlignment="Center"
+                                   Text="" TextColor="White"
+                                   FontSize="120" FontFamily="FaithFont"
+                                   WidthRequest="400" HeightRequest="400"></Label>
+                        </AbsoluteLayout>
+                        
+                        <!-- 디지털 시계 -->
+                        <AbsoluteLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                            <Image x:Name="map_image" Source="world_map.png"
+                                   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                   WidthRequest="700" HeightRequest="400" Opacity="0.5"></Image>
+                            <Label x:Name="digital_clock_time"
+                                   VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+                                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                                   Text="00:00:00" TextColor="White" FontSize="100" FontFamily="AppleFont_B"
+                                   WidthRequest="700" HeightRequest="400"></Label>
+                        </AbsoluteLayout>
+                        
+                        <!-- 아날로그 시계 -->
+                        <AbsoluteLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                            <Image x:Name="moon" Source="moon.png"
+                                   HorizontalOptions="CenterAndExpand"
+                                   VerticalOptions="CenterAndExpand"
+                                   AbsoluteLayout.LayoutBounds="0,0,400,400"
+                                   Opacity="0.7"></Image>
+                            <BoxView x:Name="hour_hand" Color="Black" HeightRequest="90" WidthRequest="8"
+                                     ScaleY="-1" AnchorY="0" TranslationX="200" TranslationY="200"/>
+                            <BoxView x:Name="min_hand" Color="Black" HeightRequest="130" WidthRequest="8"
+                                     ScaleY="-1" AnchorY="0" TranslationX="200" TranslationY="200"/>
+                            <BoxView x:Name="sec_hand" Color="Black" HeightRequest="160" WidthRequest="3"
+                                     ScaleY="-1" AnchorY="0" TranslationX="200" TranslationY="200"/>
+                            <BoxView BackgroundColor="White" CornerRadius="100" AbsoluteLayout.LayoutBounds="194,194,12,12"/>
+                        </AbsoluteLayout>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Spacing="50"
+                                 VerticalOptions="FillAndExpand"
+                                 HorizontalOptions="CenterAndExpand">
+                        <!-- 위클리 캘린더 위젯 -->
+                        <AbsoluteLayout VerticalOptions="CenterAndExpand">
+                            <!-- 프레임 -->
+                            <BoxView CornerRadius="20" Color="White" Opacity="0.3"
+                                     HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                     WidthRequest="900" HeightRequest="300"/>
+                            <BoxView CornerRadius="20,20,0,0" Color="White" Opacity="0.3"
+                                     VerticalOptions="StartAndExpand"
+                                     WidthRequest="900" HeightRequest="50"/>
+                            <Label Text="W e e k l y  T o - D o  L i s t"
+                                   TextColor="#202020" FontSize="25" FontFamily="AppleFont"
+                                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center" 
+                                   WidthRequest="900" HeightRequest="50"
+                                   VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand"/>
+                            <BoxView Color="White" AbsoluteLayout.LayoutBounds="50,110,800,1" Opacity="0.5"/>
+                            <StackLayout Orientation="Horizontal" AbsoluteLayout.LayoutBounds="50,70,800,180">
+                                <StackLayout HorizontalOptions="CenterAndExpand" Spacing="10">
+                                    <Label Text="MON" FontSize="25" TextColor="White" FontFamily="AppleFont" HorizontalTextAlignment="Center"/>
+                                    <Label Text="- 강의" FontSize="25" TextColor="White" FontFamily="EliceFont" HorizontalTextAlignment="Start"></Label>
+                                    <Label Text="- 과제" FontSize="25" TextColor="White" FontFamily="EliceFont" HorizontalTextAlignment="Start"></Label>
+                                    <Label Text="- 회화" FontSize="25" TextColor="White" FontFamily="EliceFont" HorizontalTextAlignment="Start"></Label>
+                                </StackLayout>
+                                <StackLayout HorizontalOptions="CenterAndExpand" Spacing="10">
+                                    <Label Text="TUE" FontSize="25" TextColor="White" FontFamily="AppleFont" HorizontalTextAlignment="Center"/>
+                                    <Label Text="- 강의" FontSize="25" TextColor="White" FontFamily="EliceFont" HorizontalTextAlignment="Start"></Label>
+                                    <Label Text="- 과제" FontSize="25" TextColor="White" FontFamily="EliceFont" HorizontalTextAlignment="Start"></Label>
+                                </StackLayout>
+                                <StackLayout HorizontalOptions="CenterAndExpand" Spacing="10">
+                                    <Label Text="WED" FontSize="25" TextColor="White" FontFamily="AppleFont" HorizontalTextAlignment="Center"/>
+                                    <Label Text="- 서류" FontSize="25" TextColor="White" FontFamily="EliceFont" HorizontalTextAlignment="Start"></Label>
+                                </StackLayout>
+                                <StackLayout HorizontalOptions="CenterAndExpand" Spacing="10">
+                                    <Label Text="THU" FontSize="25" TextColor="White" FontFamily="AppleFont" HorizontalTextAlignment="Center"/>
+                                    <Label Text="- 기말" FontSize="25" TextColor="White" FontFamily="EliceFont" HorizontalTextAlignment="Start"></Label>
+                                </StackLayout>
+                                <StackLayout HorizontalOptions="CenterAndExpand" Spacing="10">
+                                    <Label Text="FRI" FontSize="25" TextColor="White" FontFamily="AppleFont" HorizontalTextAlignment="Center"/>
+                                    <Label Text="- 동아리" FontSize="25" TextColor="White" FontFamily="EliceFont" HorizontalTextAlignment="Start"></Label>
+                                </StackLayout>
+                                <StackLayout HorizontalOptions="CenterAndExpand" Spacing="10">
+                                    <Label Text="SAT" FontSize="25" TextColor="White" FontFamily="AppleFont" HorizontalTextAlignment="Center"/>
+                                    <Label Text="- 알바" FontSize="25" TextColor="White" FontFamily="EliceFont" HorizontalTextAlignment="Start"></Label>
+                                    <Label Text="- 실강" FontSize="25" TextColor="White" FontFamily="EliceFont" HorizontalTextAlignment="Start"></Label>
+                                </StackLayout>
+                                <StackLayout HorizontalOptions="CenterAndExpand" Spacing="10">
+                                    <Label Text="SUN" FontSize="25" TextColor="#B31F1F" FontFamily="AppleFont" HorizontalTextAlignment="Center"/>
+                                    <Label Text="- 알바" FontSize="25" TextColor="White" FontFamily="EliceFont" HorizontalTextAlignment="Start"></Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </AbsoluteLayout>
+                        
+                        <!-- 스톱워치 위젯 -->
+                        <AbsoluteLayout VerticalOptions="CenterAndExpand">
+                            <!-- 프레임 -->
+                            <BoxView CornerRadius="20" Color="White" Opacity="0.3"
+                                     HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                     WidthRequest="300" HeightRequest="300"/>
+                            <BoxView CornerRadius="20,20,0,0" Color="White" Opacity="0.3"
+                                     VerticalOptions="StartAndExpand"
+                                     WidthRequest="300" HeightRequest="50"/>
+                            <Label Text="S t o p w a t c h" 
+                                   TextColor="#202020" FontSize="25" FontFamily="AppleFont"
+                                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                                   HeightRequest="50" WidthRequest="300"
+                                   HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+                            
+                            <!-- 시간 -->
+                            <Label x:Name="stopwatch_time" Text="00:00:00"
+                                   TextColor="#202020" FontSize="50" FontFamily="AppleFont_B"
+                                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                                   WidthRequest="300" HeightRequest="260"
+                                   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" AbsoluteLayout.LayoutBounds="0,170,300,130" Spacing="20">
+                                <Button x:Name="stopwatch_toggle" Text="Start" TextColor="White" FontSize="25" FontFamily="AppleFont"
+                                        BackgroundColor="White" WidthRequest="120" HeightRequest="80" CornerRadius="50"
+                                        HorizontalOptions="Center" VerticalOptions="Center" Clicked="toggle_Clicked"/>
+                            </StackLayout>
+                        </AbsoluteLayout>
+                        
+                        <!-- 물량 체크 위젯 -->
+                        <AbsoluteLayout VerticalOptions="CenterAndExpand">
+                            <!-- 프레임 -->
+                            <BoxView CornerRadius="150" Color="White" Opacity="0.6"
+                                     HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                     WidthRequest="300" HeightRequest="300"/>
+                            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" 
+                                         Spacing = "0" AbsoluteLayout.LayoutBounds="0,80,300,200">
+                                <Label Text="TODAY WATER INTAKE" WidthRequest="300"
+                                   TextColor="#202020" FontSize="25" FontFamily="AppleFont"
+                                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                                   VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                                <StackLayout x:Name="water_layout" Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                                    <Image x:Name="water1" Source="water2.png" WidthRequest="30" HeightRequest="40"></Image>
+                                    <Image x:Name="water2" Source="water2.png" WidthRequest="30" HeightRequest="40"></Image>
+                                    <Image x:Name="water3" Source="water2.png" WidthRequest="30" HeightRequest="40"></Image>
+                                    <Image x:Name="water4" Source="water2.png" WidthRequest="30" HeightRequest="40"></Image>
+                                    <Image x:Name="water5" Source="water2.png" WidthRequest="30" HeightRequest="40"></Image>
+                                </StackLayout>
+                                <Button Text="ADD" TextColor="White" FontSize="25" FontFamily="AppleFont"
+                                        BackgroundColor="White" WidthRequest="100" HeightRequest="80" CornerRadius="50"
+                                        VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Clicked="water_Clicked"/>
+                            </StackLayout>
+                        </AbsoluteLayout>
+                        
+                        <StackLayout VerticalOptions="CenterAndExpand">
+                            <!-- Neflix Icon -->
+                            <ImageButton x:Name="netflix"
+                                         Source="netflix_icon.png"
+                                         WidthRequest="100"
+                                         HeightRequest="100"
+                                         Clicked="netflix_Clicked">
+                            </ImageButton>
+                            <Label Text="Netflix"
+                                   TextColor="White"
+                                   FontSize="25"
+                                   FontFamily="AppleFont"
+                                   HorizontalTextAlignment="Center"></Label>
+                            <Label HeightRequest="10"></Label>
+                            
+                            <!-- Youtube Icon -->
+                            <ImageButton x:Name="youtube"
+                                         Source="youtube_icon.png"
+                                         WidthRequest="100"
+                                         HeightRequest="100"
+                                         Clicked="youtube_Clicked">
+                            </ImageButton>
+                            <Label Text="YouTube"
+                                   TextColor="White"
+                                   FontSize="25"
+                                   FontFamily="AppleFont"
+                                   HorizontalTextAlignment="Center"></Label>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+
+                <!-- 앱 클릭 시 나타나는 이미지 -->
+                <AbsoluteLayout x:Name="app_layout" AbsoluteLayout.LayoutBounds="100,120,1600,750" IsVisible="False">
+                    <BoxView CornerRadius="20,20,0,0" Color="Black" Opacity="0.8"
+                             AbsoluteLayout.LayoutBounds="0,0,1500,50"
+                             HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                    <Image x:Name="app_image" Source=" " AbsoluteLayout.LayoutBounds="0,50,1500,750" Aspect="AspectFill"/>
+                    <Label x:Name="app_title_label" Text=" "
+                                   TextColor="White" FontSize="25" FontFamily="AppleFont"
+                                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                                   AbsoluteLayout.LayoutBounds="0,0,1500,50" WidthRequest="1500"
+                                   HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    <Button Text="✕" TextColor="White" FontSize="25" FontFamily="AppleFont" AbsoluteLayout.LayoutBounds="1450,0,50,50" Clicked="netflix_Clicked"/>
+                </AbsoluteLayout>
+
+                <!-- 카카오톡 알림 -->
+                <AbsoluteLayout x:Name="kakaotalk_layout" AbsoluteLayout.LayoutBounds="0,0,1920,100" IsVisible="False">
+                    <BoxView AbsoluteLayout.LayoutBounds="400,20,1120,70"
+                             Color="White" Opacity="0.6" CornerRadius="35"></BoxView>
+                    <Image Source="kakaotalk_icon.png" AbsoluteLayout.LayoutBounds="400,20,80,70"></Image>
+                    <Label x:Name="kakaotalk_friend_label" Text = " " TextColor ="#101010" FontSize="30" FontFamily="AppleFont_B"
+                           AbsoluteLayout.LayoutBounds="480,20,200,70"
+                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                    <Label x:Name="kakaotalk_message_label" Text = " " TextColor="#101010" FontSize="30" FontFamily="AppleFont"
+                           AbsoluteLayout.LayoutBounds="700,20,820,70"
+                           HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                </AbsoluteLayout>
+
+            </AbsoluteLayout>
+           
+            
+            
+            
+           
+            <!-- 3 -->
+            <AbsoluteLayout AbsoluteLayout.LayoutBounds="0,1020,1920,60"
+                            BackgroundColor="#606060">
+                <!-- 최신 뉴스 -->
+                <Label x:Name="news_label" Text =" "
+                       TextColor="White" FontSize="30" FontFamily="AppleFont" 
+                       HeightRequest="60" VerticalTextAlignment="Center"/>
+                
+                <!-- 좌측 하단 미니 시계-->
+                <Label x:Name="miniclock_label" Text =" " 
+                       BackgroundColor="#202020"
+                       TextColor="White" FontSize="30" FontFamily="AppleFont_B"
+                       HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                       AbsoluteLayout.LayoutBounds="0,0,250,60"
+                       HorizontalOptions="Fill" VerticalOptions="Fill"/>
+                
+                <!-- 날씨 정보 (텍스트와 아이콘) -->
+                <Label x:Name ="weather_label" Text="맑음 20.4"
+                       BackgroundColor="#202020"
+                       TextColor="White" FontSize="30" FontFamily="AppleFont"
+                       HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                       AbsoluteLayout.LayoutBounds="1670,0,250,60"
+                       VerticalOptions="FillAndExpand"/>
+                <Image x:Name ="weather_icon" Source="sunny.png"
+                       AbsoluteLayout.LayoutBounds="1670,0,60,60"
+                       WidthRequest="40" HeightRequest="40"
+                       HorizontalOptions="Center" VerticalOptions="Center"/>
+                
+            </AbsoluteLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
